@@ -345,7 +345,13 @@ module.exports = function(webpackEnv) {
             // The preset includes JSX, Flow, TypeScript, and some ESnext features.
             {
               test: /\.(js|mjs|jsx|ts|tsx)$/,
-              include: paths.appSrc,
+              include: function(path) {
+                return (
+                  path.includes(paths.appSrc) ||
+                  (path.includes('react-native-') &&
+                    !path.includes('react-native-web'))
+                );
+              },
               loader: require.resolve('babel-loader'),
               options: {
                 customize: require.resolve(
