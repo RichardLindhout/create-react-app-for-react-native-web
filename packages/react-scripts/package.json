@@ -1,14 +1,14 @@
 {
-  "name": "react-scripts",
-  "version": "2.1.1",
-  "description": "Configuration and scripts for Create React App.",
-  "repository": "facebook/create-react-app",
+  "name": "react-scripts-for-react-native-web",
+  "version": "2.1.1-alpha.0",
+  "description": "Configuration and scripts for Create React App modified to compile react-native-* packages in node_modules.",
+  "repository": "amsb/create-react-app-for-react-native-web",
   "license": "MIT",
   "engines": {
     "node": ">=6"
   },
   "bugs": {
-    "url": "https://github.com/facebook/create-react-app/issues"
+    "url": "https://github.com/amsb/create-react-app-for-react-native-web/issues"
   },
   "files": [
     "bin",
