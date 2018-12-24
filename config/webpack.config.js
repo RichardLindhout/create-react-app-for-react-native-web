@@ -364,7 +364,7 @@ module.exports = function(webpackEnv) {
               include: function(path) {
                 return (
                   path.includes(paths.appSrc) ||
-                  path.includes('react-navigation') || 
+                 // path.includes('react-navigation') || 
                   (path.includes('react-native-') &&
                     !path.includes('react-native-web'))
                 )
