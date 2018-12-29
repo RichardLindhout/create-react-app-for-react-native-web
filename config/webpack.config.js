@@ -366,7 +366,7 @@ module.exports = function(webpackEnv) {
                   path.includes(paths.appSrc) ||
                  // path.includes('react-navigation') || 
                   (path.includes('react-native-') &&
-                    !path.includes('react-native-web'))
+                    !path.includes('react-native-web') && !path.includes('react-native-navigation'))
                 )
               },
               loader: require.resolve('babel-loader'),
