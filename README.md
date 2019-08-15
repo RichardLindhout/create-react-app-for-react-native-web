@@ -49,6 +49,6 @@ Support vector font's
 
 Support index.web
 
-`appIndexJs: resolveModule(resolveApp, "src/index"),`
-to
+`appIndexJs: resolveModule(resolveApp, "src/index"),`   
+to   
 `appIndexJs: resolveModule(resolveApp, "index.web"),`
