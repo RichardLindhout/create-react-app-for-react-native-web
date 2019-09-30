@@ -23,7 +23,7 @@
     "yarn.lock.cached"
   ],
   "bin": {
-    "create-react-app": "./index.js"
+     "react-scripts": "./bin/react-scripts.js"
   },
   "dependencies": {
     "chalk": "2.4.2",
