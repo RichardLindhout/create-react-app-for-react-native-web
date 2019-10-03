@@ -55,3 +55,7 @@ Support index.web
 `appIndexJs: resolveModule(resolveApp, "src/index"),`  
 to  
 `appIndexJs: resolveModule(resolveApp, "index.web"),`
+
+Add image path
+
+`appImagesPath: resolveApp("img"),`
