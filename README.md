@@ -12,10 +12,7 @@ Disable scope:
 https://stackoverflow.com/questions/44114436/the-create-react-app-imports-restriction-outside-of-src-directory
 
 ```javascript
-new ModuleScopePlugin(paths.appSrc, [
-  paths.appImagesPath,
-  paths.appPackageJson,
-]),
+new ModuleScopePlugin([paths.appPath, paths.appImagesPath]);
 ```
 
 add some includes
@@ -55,7 +52,3 @@ Support index.web
 `appIndexJs: resolveModule(resolveApp, "src/index"),`  
 to  
 `appIndexJs: resolveModule(resolveApp, "index.web"),`
-
-Add image path
-
-`appImagesPath: resolveApp("img"),`
