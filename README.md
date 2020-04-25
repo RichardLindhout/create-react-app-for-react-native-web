@@ -58,8 +58,8 @@ Support vector font's
 },
 ```
 
-Support index.web
+Support index.web replace all
 
 `appIndexJs: resolveModule(resolveApp, "src/index"),`  
-to  
+with
 `appIndexJs: resolveModule(resolveApp, "index.web"),`

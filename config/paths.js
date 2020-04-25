@@ -66,6 +66,7 @@ module.exports = {
   appIndexJs: resolveModule(resolveApp, "index.web"),
   appPackageJson: resolveApp("package.json"),
   appSrc: resolveApp("src"),
+  appImagesPath: resolveApp("img"),
   appTsConfig: resolveApp("tsconfig.json"),
   appJsConfig: resolveApp("jsconfig.json"),
   yarnLockFile: resolveApp("yarn.lock"),
@@ -95,6 +96,7 @@ module.exports = {
   testsSetup: resolveModule(resolveApp, "src/setupTests"),
   proxySetup: resolveApp("src/setupProxy.js"),
   appNodeModules: resolveApp("node_modules"),
+  appImagesPath: resolveApp("img"),
   publicUrlOrPath,
   // These properties only exist before ejecting:
   ownPath: resolveOwn("."),
