@@ -396,7 +396,16 @@ module.exports = function (webpackEnv) {
             // The preset includes JSX, Flow, TypeScript, and some ESnext features.
             {
               test: /\.(js|mjs|jsx|ts|tsx)$/,
-              include: paths.appSrc,
+              // include: paths.appSrc,
+              include: function (path) {
+                return (
+                  path.includes(paths.appSrc) ||
+                  path.includes("react-native-web-tab-view") ||
+                  (path.includes("react-native-") &&
+                    !path.includes("react-native-web") &&
+                    !path.includes("react-native-navigation"))
+                );
+              },
               loader: require.resolve("babel-loader"),
               options: {
                 customize: require.resolve(
@@ -551,6 +560,14 @@ module.exports = function (webpackEnv) {
                   },
                 },
                 "sass-loader"
+              ),
+            },
+            {
+              test: /\.ttf$/,
+              loader: "url-loader", // or directly file-loader
+              include: path.resolve(
+                __dirname,
+                "node_modules/react-native-vector-icons"
               ),
             },
             // "file" loader makes sure those assets get served by WebpackDevServer.
