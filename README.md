@@ -11,8 +11,19 @@ Edited for react-native-web
 Disable scope:
 https://stackoverflow.com/questions/44114436/the-create-react-app-imports-restriction-outside-of-src-directory
 
+Replace
+
 ```javascript
-new ModuleScopePlugin([paths.appPath, paths.appImagesPath]);
+new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson]),
+```
+
+with:
+
+```javascript
+ new ModuleScopePlugin(
+          [paths.appSrc, paths.appImagesPath],
+          [paths.appPackageJson]
+        ),
 ```
 
 add some includes
