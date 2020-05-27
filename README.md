@@ -40,6 +40,7 @@ add some includes
         path.includes("react-native-web-tab-view") ||
         (path.includes("react-native-") &&
         !path.includes("react-native-web") &&
+        !path.includes("react-native-tab-view") &&
         !path.includes("react-native-navigation"))
     );
     },
