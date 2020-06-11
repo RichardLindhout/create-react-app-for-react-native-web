@@ -1,3 +1,5 @@
+deprecated use: https://github.com/web-ridge/create-react-native-web-application
+
 # react-scripts
 
 This package includes scripts and configuration used by [Create React App](https://github.com/facebook/create-react-app).<br>
